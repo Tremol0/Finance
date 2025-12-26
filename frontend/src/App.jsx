@@ -7,6 +7,8 @@ import { Box, useColorModeValue } from "@chakra-ui/react";
 import SpendingPage from "./pages/SpendingPage";
 import SpendingsTable from "./pages/SpendingsTable";
 import Dashboard from "./pages/Dashboard";
+import TablesPage from "./pages/TablesPage";
+import TableDetail from "./pages/TableDetail";
 import Topbar from "./components/Topbar";
 
 function App() {
@@ -23,7 +25,8 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/create" element={<CreatePage />} />
         <Route path="/spending" element={<SpendingPage />} />
-        <Route path="/tables" element={<SpendingsTable />} />
+        <Route path="/tables" element={<TablesPage />} />
+        <Route path="/tables/:id" element={<TableDetail />} />
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </Box>
